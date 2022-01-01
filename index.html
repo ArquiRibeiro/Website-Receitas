@@ -4,25 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cozinhando Com Espinhos</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <nav id="navbar">
-        <a href="#home">Home</a>
-        <div>
-            <a href="#">FAQ</a>
-            <a href="#recites">Receitas</a>
-        </div>
-    </nav>
-    <div id="header">
-        <img src="images/pexels-ylanite-koppens-1445416.jpg" alt="">
-        <h1>Cozinhando Com <span>Espinhos</span></h1>
-    </div>
-    <div id="FAQ">
-        <h2>Você sabia que várias espécies de <span class="span-cactos">cactos</span> são comestíveis?</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus nulla tempora delectus dolorum nam cum eum culpa placeat nihil eos porro, libero aspernatur itaque veritatis officia aperiam harum explicabo voluptatem!</p>
-    </div>
+    <header id="top-header">
+        <nav>
+            <a href="#home">Home</a>
+            <div>
+                <a href="#">Introdução</a>
+                <a href="#recites">Receitas</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <article id="Main-Image">
+            <div>
+                <img src="images/pexels-ylanite-koppens-1445416.jpg" alt="">
+                <h1>Cozinhando Com <span>Espinhos</span></h1>
+            </div>
+        </article>
+
+        <section id="Introduction">
+            <header>
+                <h2>Bem vindo ao Cozinhando Com Espinhos!</h2>
+            </header>
+            <article>
+                <div>
+                    <h3>Você sabia que várias espécies de <span>cactos</span> são comestíveis?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus nulla tempora delectus dolorum nam cum eum culpa placeat nihil eos porro, libero aspernatur itaque veritatis officia aperiam harum explicabo voluptatem!</p>
+                </div>
+                <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus nulla tempora delectus dolorum nam cum eum culpa placeat nihil eos porro, libero aspernatur itaque veritatis officia aperiam harum explicabo voluptatem!</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="Recipes">
+            <header>
+                <h2>Receitas</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Nopal em molho de tomate</h3>
+                    <img src="images/31463-nopal-e-um-alimento-rico-em-fibras-vita-article_block_media_large-3.jpg" alt="Nopal em molho de tomate">
+                </header>
+                <p>pode ser feito em 30 minutos e serve até 5 pessoas</p>
+                <h3 for="li">Ingredientes:</h3>
+                <ul>
+                    <div>
+                        <li>
+                            <input type="checkbox" id="ingredient1">
+                            <label for="ingredient1">300 gramas de nopal</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ingredient2">
+                            <label for="ingredient2">1 unidade de pimenta verde</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ingredient3">
+                            <label for="ingredient3">200 gramas de tomate</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ingredient4">
+                            <label for="ingredient4">3 pitadas de sal</label>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <input type="checkbox" id="ingredient5">
+                            <label for="ingredient5">150ml de água</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ingredient6">
+                            <label for="ingredient6">1 folha de erva-de-santa-maria</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ingredient7">
+                            <label for="ingredient7">1 cebola</label>                            
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ingredient8">
+                            <label for="ingredient8">1 dente de alho</label>                                
+                        </li>
+                    </div>
+                </ul>
+                <h3>Modo de preparo:</h3>
+                <ol type="1">
+                    <li>Para preparar esta receita tipicamente mexicana comece por cortar o nopal em 
+                        tiras pequenas (semelhante à vagem) e lavar bem com água corrente.
+                    </li>
+                    <li>Cozinhe o nopal no fogo médio, em uma panela com água, por 10 minutos. Em
+                        seguida escorra para rejeitar o excesso de baba que possam ter.
+                    </li>
+                    <li>
+                        Para o molho vermelho, grelhe ou asse numa frigideira sem óleo os tomates,
+                        a pimenta, o alho e a cebola.
+                    </li>
+                    <li>Quando os legumes deste nopal em molho de tomate estiverem prontos, bata-os
+                        no liquidificador com um pouco de água, e transfira para uma panela ao fogo
+                        médio. Adicione a erva-de-santa-maria, para aromatizar, e acrescente os nopales
+                    </li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>Autor: Leonardo Ribeiro Andrade</p>
+        <a href="https://github.com/Blooming-Cactus" target="_blank" rel="noopener noreferrer">https://github.com/Blooming-Cactus</a>
+        <a href="mailto:leonardoriband@gmail.com">leonardoriband@gmail.com</a>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
 
