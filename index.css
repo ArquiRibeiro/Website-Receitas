@@ -81,7 +81,7 @@ h2{
     background-color: var(--green);
 }
 
-#navbar .navbar-a-right{
+#navbar div{
     height: 100%;
     display: flex;
     justify-content: flex-start;
