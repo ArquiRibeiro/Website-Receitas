@@ -236,6 +236,7 @@ main #Recipes{
 
 main #Recipes article header{
     max-width: 800px;
+    box-shadow: 8px 8px 5px var(--shadow);
 
     position: relative;
 }
@@ -415,11 +416,4 @@ footer a{
 
 footer a:hover{
     color: var(--paragraph2)
-}
-
-/*-----MEDIA QUERIES-----*/
-@media screen and (min-width: 600px) {
-    main #Main-Image h1{
-        /*font-size: 3em;*/
-    }
 }
