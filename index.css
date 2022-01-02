@@ -2,7 +2,6 @@
     --white: aliceblue;
     --black: #151515;
     --body: aliceblue;
-    --main: aliceblue;
     --recipes: lightgreen;
     --paragraph: #404040;
     --paragraph2: azure;
@@ -16,6 +15,7 @@
 }
 
 *{
+    scroll-behavior: smooth;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -25,18 +25,24 @@ header{
     margin-bottom: 30px;
 }
 
-h2, h3{
-    color: var(--h2);
+h2{
+    color: var(--green);
     font-family: Georgia, "Times New Roman", serif;
     text-align: center;
     line-height: 2em;
-    text-shadow: 1px 1px 3px var(--paragraph);    
+    text-shadow: 1px 1px 2px var(--black);
+    
+    animation-name: colorChange;
+    animation-duration: 3000ms;
+    animation-play-state: paused;
 }
 
 h3{
     color: var(--paragraph);
     text-align: left;
     text-shadow: 0px 0px 0px var(--paragraph);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 2em;
 }
 
 p{
@@ -54,7 +60,7 @@ span{
     animation-play-state: paused;
 }
 
-@keyframes span-colorChange{
+@keyframes colorChange{
     0%{
         color: var(--paragraph);
     }
@@ -65,21 +71,6 @@ span{
 
 label{
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-ul{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 32px;
-    color: var(--paragraph);
-    margin-bottom: 30px;
-    list-style-position: inside;
-}
-
-ol{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-left: 20px;
-    color: var(--paragraph);
-    line-height: 24px;
 }
 
 /*-----BODY-----*/
@@ -140,7 +131,6 @@ main{
     
     width: 100%;
     margin: 0px auto;
-    margin-bottom: 50px;
 }
 
 /*-----MAIN-IMAGE-----*/
@@ -222,7 +212,7 @@ main #Main-Image div img{
 
 /*-----INTRODUCTION-----*/
 main #Introduction{
-    padding-top: 20px;
+    padding: 45px 10px;
 }
 
 main #Introduction article{
@@ -241,21 +231,24 @@ main #Introduction article div{
 
 /*-----RECIPES-----*/
 main #Recipes{
-    
+    padding: 45px 0px;
 }
-    main #Recipes article header{
+
+main #Recipes article header{
     max-width: 800px;
 
-    border: 3px solid var(--paragraph);
     position: relative;
 }
 
 main #Recipes article header h3{
     color: var(--paragraph2);
-    background-color: var(--recipeName);
+    
+    background-image: linear-gradient(90deg, var(--recipeName), transparent);
 
     position: absolute;
     bottom: 0px;
+    
+    padding-left: 10px
 }
 
 main #Recipes article header img{
@@ -276,6 +269,10 @@ main #Recipes article p{
 }
 
 main #Recipes article ul{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 32px;
+    color: var(--paragraph);
+    list-style-position: inside;
     width: 100%;
 
     display: flex;
@@ -283,6 +280,8 @@ main #Recipes article ul{
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
+
+    margin-bottom: 30px;
 }
 
 main #Recipes article ul div li{
@@ -301,19 +300,105 @@ main #Recipes article ul div li input:checked + label{
 }
 
 main #Recipes article ol{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--paragraph);
+    line-height: 24px;
+
+    padding-left: 15px;
+}
+
+main #Recipes article ol li::marker{
+    font-weight: bold;
+    color: var(--purple);
+}
+
+/*-----GALLERY-----*/
+main #Gallery{
+    padding: 45px 0px;
+    padding-bottom: 60px;
+    background-color: var(--paragraph);
+    background-image: url("images/carbon_fibre.png");
+    background-size: 24px;
+}
+
+main #Gallery article{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+main #Gallery article div{
+    width: 300px;
+    height: 350px;
+    background-color: var(--white);
+    transition: 500ms;
+    box-shadow: 8px 8px 3px var(--shadow);
+
+    position: relative;
+
+    padding: 10px;
+}
+
+main #Gallery article div:hover{
+    transform: scale(120%);
+    box-shadow: 10px 10px 4px var(--shadow);
+}
+
+main #Gallery article div img{
+    width: 100%;
+    max-height: 200px;
+}
+
+main #Gallery article div p{
+    font-family: Brush Script MT, cursive;
+    font-size: 1.5em;
+    text-align: right;
 }
 
 /*-----FOOTER-----*/
 footer{
     width: 100%;
     height: 100px;
-    background-image: linear-gradient(90deg, var(--black) 90%, var(--link) 10%);
+    /*background-image: linear-gradient(90deg, var(--black) 95%, var(--link) 5%);*/
+    background-color: var(--black);
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
     gap: 0px;
+    position: relative;
+    align-items: flex-start;
 
     padding: 5px 15px;
+}
+
+footer #left-point{
+    display: block;
+    width: 80px;
+    height: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    background-color: var(--purple);
+    
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    animation-name: translate-left;
+    animation-duration: 1000ms;
+    animation-play-state: paused;
+}
+
+@keyframes translate-left{
+    0%{
+        transform: translatex(30px);
+    }
+    100%{
+
+    }
 }
 
 footer p{
@@ -324,6 +409,8 @@ footer a{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--link);
     transition: 200ms;
+
+    text-decoration: none;
 }
 
 footer a:hover{
