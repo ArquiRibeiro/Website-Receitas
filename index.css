@@ -212,7 +212,7 @@ main #Main-Image div img{
 
 /*-----INTRODUCTION-----*/
 main #Introduction{
-    padding: 45px 10px;
+    padding: 25px 10px;
 }
 
 main #Introduction article{
@@ -231,12 +231,14 @@ main #Introduction article div{
 
 /*-----RECIPES-----*/
 main #Recipes{
-    padding: 45px 0px;
+    padding: 25px 0px;
 }
 
 main #Recipes article header{
     max-width: 800px;
     box-shadow: 8px 8px 5px var(--shadow);
+    border-radius: 25px;
+    overflow: hidden;
 
     position: relative;
 }
@@ -267,6 +269,13 @@ main #Recipes article{
 
 main #Recipes article p{
     margin-bottom: 20px;
+}
+
+main #Recipes #Preparo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 main #Recipes article ul{
@@ -301,6 +310,7 @@ main #Recipes article ul div li input:checked + label{
 }
 
 main #Recipes article ol{
+    max-width: 40ch;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--paragraph);
     line-height: 24px;
@@ -318,8 +328,8 @@ main #Gallery{
     padding: 45px 0px;
     padding-bottom: 60px;
     background-color: var(--paragraph);
-    background-image: url("images/carbon_fibre.png");
-    background-size: 24px;
+    background-image: url("images/retina_wood.png");
+    /*background-size: 128px;*/
 }
 
 main #Gallery article{
