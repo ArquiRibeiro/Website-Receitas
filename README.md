@@ -1,5 +1,5 @@
 # Receitas
-[Visualizar Website](https://blooming-cactus.github.io/Website-Receitas/)
+[Visualizar Website](https://arquiribeiro.github.io/Website-Receitas/)
 
 Este é um simples Website criado com o intuito de aplicar e aprofundar meus estudos em HTML e CSS, com um pouco de JavaScript para poder utilizar o Intersection Observer API. Neste site, foram utilizados diversos conceitos básicos, como:
 - Listas ordernadas e não-ordenadas
